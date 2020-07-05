@@ -1,0 +1,20 @@
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  .title {
+    font-size: 24px;
+
+    .grey {
+      color: grey;
+      font-size: 14px;
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+}

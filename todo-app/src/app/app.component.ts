@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import ITodo from './interfaces/todo.interface'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'todo-app';
+  list: ITodo[] = [];
+
+  generateDefaultToDos(): ITodo[] {
+    return [
+      {
+        id: 1,
+        task: 'First task',
+        complete: false,
+        editing: false,
+      },
+      {
+        id: 2,
+        task: 'Second task',
+        complete: true,
+        editing: false,
+      }
+    ];
+  }
+
+  constructor() {
+    this.list = this.generateDefaultToDos();
+  }
 }
