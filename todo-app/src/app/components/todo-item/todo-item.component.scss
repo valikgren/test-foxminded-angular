@@ -1,0 +1,13 @@
+.todo-item_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.todo-item_delete {
+  cursor: pointer;
+}
+.complete{
+  text-decoration: line-through;
+  color: grey;
+}

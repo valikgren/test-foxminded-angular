@@ -8,5 +8,15 @@
   <div class="add-todo">
     here will be form
   </div>
-  <app-todo-list [list]="list"></app-todo-list>
+
+  <h2>Tasks</h2>
+  <mat-list role="list" class="todo-list">
+    <app-todo-item
+      *ngFor="let task of list"
+      [item]="task"
+      (completeChange)="onCompleteChange(task, $event)"
+      (deleteToDo)="onDelete(task)"
+    >
+    </app-todo-item>
+  </mat-list>
 </div>

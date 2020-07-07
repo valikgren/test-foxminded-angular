@@ -1,1 +1,19 @@
-<p>{{ item | json }}</p>
+<mat-list-item>
+  <div class="todo-item_content">
+    <mat-checkbox
+      [class.complete]="item?.complete"
+      [checked]="item.complete"
+      (change)="this.completeChange.emit($event)"
+    >
+      {{ item?.task }}
+    </mat-checkbox>
+    <mat-icon
+      class="todo-item_delete"
+      aria-hidden="false"
+      aria-label="delete"
+      (click)="this.deleteToDo.emit()"
+    >
+      delete
+    </mat-icon>
+  </div>
+</mat-list-item>
